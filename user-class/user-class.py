@@ -16,4 +16,17 @@ class User:
             print("Password does not match!")
         user_data = {"user_name" : user_name, "password" : password}
         return user_data
-       
+
+    def login(user_data):
+        print("Please, enter your credentials in the terminal below:")
+        user_name = input("User name: \n")
+        if user_name in user_data["user_name"]:
+            password = input("Provide your password: \n")
+            if password == user_data["password"]:
+                print("Login successful!")
+            else:
+                print("Invalid password.")
+        else:
+            print("User name does not exist.")
+user_data = User.register()
+User.login(user_data)
