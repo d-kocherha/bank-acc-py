@@ -28,5 +28,4 @@ class User:
                 print("Invalid password.")
         else:
             print("User name does not exist.")
-user_data = User.register()
-User.login(user_data)
+
