@@ -16,7 +16,4 @@ class User:
             print("Password does not match!")
         user_data = {"user_name" : user_name, "password" : password}
         return user_data
-    
-
-User.register()
-    
+       
