@@ -1,14 +1,17 @@
 import data.db_operator as db
 import logic.user_features as uf
 
+data_path = db.db_path
+data = db.read_db(data_path)
+
 def registration():
     """Creates user and updates db."""
-    db.update_db(uf.register())
+    db.update_db(uf.register(data))
     main()
 
 def login():
     """Login to the system."""
-    uf.login(db.read_db(db.db_path))
+    uf.login(data)
     main()
 
 def main():
