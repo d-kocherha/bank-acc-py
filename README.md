@@ -67,7 +67,7 @@ I'm updating it at my own pace — which has been pretty decent so far, especial
 
  - Hello there! I'm Dmytro, almost 30 years old, and I've recently discovered something thrilling in coding. It feels like playing with LEGO — you're building your own "X," and your project is only limited by your real-world resources: time, knowledge, experience, and willingness to learn.
  - In my case, I thought I was somehow broken — I was constantly looking for something new to learn (accounting, guitar, finance, coding). And then I dived deeper into coding and understood that this might be it — there's so much to learn that I probably won't have enough room in my head to absorb it all!
- - Currently, I work at a well-known investment bank and I'm taking my very first steps in tech world (which is nasty fueled by recent lay offs :D ). To bring some structure to my learning, I picked in the Meta Back-End Developer course on Coursera, which has helped me see progress and learn/apply new techniques.
+ - Currently, I work at a well-known investment bank and I'm taking my very first steps in tech world (which is nasty fueled by recent layoffs :D). To bring some structure to my learning, I picked in the Meta Back-End Developer course on Coursera, which has helped me see progress and learn/apply new techniques.
  - The job market is scary, yes — but who knows? Maybe my curiosity and persistence will carry me far enough to land a role in tech someday. This story is still unfolding.
 
 # Thanks for stopping by — and happy coding!!!
