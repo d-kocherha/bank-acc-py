@@ -1,7 +1,7 @@
 import uuid
 
 def read_username(user_data, user_name):
-    """Look for username in data to either login or regect to register."""
+    """Look for username in data to either login or reject to register."""
     for user in user_data:
         if user_name == user:
             return True
