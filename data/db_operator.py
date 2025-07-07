@@ -5,7 +5,7 @@ db_path = Path("data/db.json")
 
 def read_db(db_path):
     """Read db to return values for further search."""
-    db = json.loads(db_path.read_text()) #changed to back
+    db = json.loads(db_path.read_text()) #convert db to dictionary
     return db
 
 def update_db(user_data):
