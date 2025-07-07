@@ -1,18 +1,14 @@
 {
-    "4d0ac673-1388-4d8c-9b17-4a8b27652914": {
-        "user_name": "a",
-        "password": "b"
+    "Alla": {
+        "id": "47544482-d26c-4356-b393-22aaea321c3e",
+        "password": "Craig"
     },
-    "b20c8da0-4082-4dbc-970b-d7b1d6c48937": {
-        "user_name": "Jack",
-        "password": "Alfa"
+    "Alla1": {
+        "id": "900a5016-ba14-4beb-9bfb-b031714af392",
+        "password": "Dren"
     },
-    "bac3acf3-4199-4d53-a323-d8e47d9ceedd": {
-        "user_name": "clarissa_229",
-        "password": "Clause"
-    },
-    "5c3df5a1-9e42-4724-ac9d-e3bf4ba2b229": {
-        "user_name": "Ada",
-        "password": "Lovelase"
+    "alfa": {
+        "id": "41fd618a-0aa6-4e19-bad9-be53847f1d20",
+        "password": "romeo"
     }
 }
