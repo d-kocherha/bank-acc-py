@@ -1,13 +1,21 @@
-def withdrawal(self, withdrawal):
-    # Withdrawal works okay. No changes required.
-    self.balance -= withdrawal
-    print(f"You have withdrawn {float(withdrawal)}$.\n"\
-        f"Your new balance is {float(self.balance)}$.")
-    self.history.append(f"Withdrawal : -{float(withdrawal)}")
+def create_account(user_ID):
+    """Function for creation of user bank account"""
+    user_account = {user_ID : {"balance" : 0}}     
+    return user_account
 
-def deposit(self, deposit):
+def retrieve_balance(account_data):
+    """Fetch data from accounts for balance upd."""
+    pass
+
+def withdrawal(balance, withdrawal):
+    # Withdrawal works okay. No changes required.
+    balance -= withdrawal
+    print(f"You have withdrawn {float(withdrawal)}$.\n"\
+        f"Your new balance is {float(balance)}$.")
+
+
+def deposit(balance, deposit):
     # Deposit works okay. No changes required.
-    self.balance += deposit
+    balance += deposit
     print(f"Your deposit of {float(deposit)}$ has been successful.\n"\
-          f"Your new balance is {float(self.balance)}$")
-    self.history.append(f"Deposit : +{float(deposit)}")
+          f"Your new balance is {float(balance)}$")
