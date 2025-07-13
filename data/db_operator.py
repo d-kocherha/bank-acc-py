@@ -1,16 +1,28 @@
 import json
 from pathlib import Path
 
-db_path = Path("data/db.json")
+class Data_Operator:
 
-def read_db(db_path):
-    """Read db to return values for further search."""
-    db = json.loads(db_path.read_text()) #convert db to dictionary
-    return db
+    def __init__(self, user_db, account_db):
+        self.user_db = Path(f"{user_db}.json")
+        self.account_db = Path(f"{account_db}.json")
 
-def update_db(user_data):
-    """Save changes to db"""
-    db = read_db(db_path)
-    updated = {**db, **user_data}
-    return db_path.write_text(json.dumps(updated, indent=4))
+    def read_db(self):
+        """Read db to return values for further search."""
+        db = json.loads(self.user_db.read_text()) #convert db to dictionary
+        return db
 
+    def update_db(self, user_data):
+        """Save changes to db"""
+        db = self.read_db()
+        updated = {**db, **user_data}
+        return self.user_db.write_text(json.dumps(updated, indent=4))
+
+    def read_acc(self):
+        open_acc_db = json.loads(self.account_db.read_text())
+        return open_acc_db
+
+    def update_acc(self, transaction):
+        open_db = self.read_acc()
+        updated_acc = {**open_db, **transaction}
+        return self.account_db.write_text(json.dumps(updated_acc, indent=4))
