@@ -22,7 +22,7 @@ class Data_Operator:
         open_acc_db = json.loads(self.account_db.read_text())
         return open_acc_db
 
-    def update_acc(self, transaction):
+    def update_acc(self, changes):
         open_db = self.read_acc()
-        updated_acc = {**open_db, **transaction}
+        updated_acc = {**open_db, **changes}
         return self.account_db.write_text(json.dumps(updated_acc, indent=4))

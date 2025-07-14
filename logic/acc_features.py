@@ -4,14 +4,16 @@ class BankAccount:
     def __init__(self):
         self.balance = 0
 
-    def create_account(self, user_ID):
+    def create_account(user_ID):
         """Function for creation of user bank account"""
-        user_account = {user_ID : {"balance" : 0}}     
+        user_account = {'user_account' : user_ID,
+                         'balance' : 0}     
         return user_account
 
-    def retrieve_balance(account_data):
+    def retrieve_balance(self, account_data):
         """Fetch data from accounts for balance upd."""
-        pass
+        self.balance = account_data["balance"]
+        return self.balance
 
     def withdrawal(self, withdrawal):
         # Withdrawal works okay. No changes required.

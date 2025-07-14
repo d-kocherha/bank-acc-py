@@ -1,13 +1,13 @@
 import uuid
 
-def read_username(user_data, user_name):
+def get_username(user_data, user_name):
     """Look for username in data to either login or reject to register."""
     for user in user_data:
         if user_name == user:
             return True
     return  False
 
-def read_password(user_data, password):
+def get_password(user_data, password):
     """Search for password of the user"""
     for user in user_data.values():
         if password == user["password"]:
@@ -17,7 +17,7 @@ def read_password(user_data, password):
 def register(user_data):
     print("Welcome to the Bank LTD, please register new user!")
     user_name = input("Enter new user name: \n")
-    if read_username(user_data, user_name) == False:
+    if get_username(user_data, user_name) == False:
         password = input("Enter your password: \n")
         password_confirm = input("Enter your password to confirm: \n")
         if password == password_confirm:
@@ -37,19 +37,21 @@ def register(user_data):
 
 def login(user_data):
     """Linear search function to look for user. Will get clunky once data expands.
-    TODO Learn DB, potentially less husle.
+    TODO Learn DB
     """
     print("Please, enter your credentials in the terminal below:")
     user_name = input("User name: \n")
-    if read_username(user_data, user_name):
+    if get_username(user_data, user_name):
         password = input("Provide your password: \n")
-        if read_password(user_data, password):
+        if get_password(user_data, password):
             print("Login successful!")
-            return True
+            for user in user_data.values():
+                return user['id']
         else:
             print("Invalid password.")
             return False
     else:
         # Return msg if no user found   
         print("User name does not exist.")
+        return False
 

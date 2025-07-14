@@ -14,5 +14,9 @@
     "Danny": {
         "id": "123451235",
         "password": "Anix"
+    },
+    "Alias": {
+        "id": "f62b150a-7675-4df7-bc46-2bffa44b9d73",
+        "password": "Desmond"
     }
 }
