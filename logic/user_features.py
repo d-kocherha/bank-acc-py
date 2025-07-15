@@ -7,6 +7,12 @@ def get_username(user_data, user_name):
             return True
     return  False
 
+def get_id(user_data, user_name):
+    """Retrieves id of the user, to return it in the login function"""
+    if user_name in user_data:
+        return user_data[user_name].get("id")
+    return None
+
 def get_password(user_data, password):
     """Search for password of the user"""
     for user in user_data.values():
@@ -45,8 +51,9 @@ def login(user_data):
         password = input("Provide your password: \n")
         if get_password(user_data, password):
             print("Login successful!")
-            for user in user_data.values():
-                return user['id']
+            #assign ID to be returned with successful login
+            id = get_id(user_data, user_name)
+            return id
         else:
             print("Invalid password.")
             return False
