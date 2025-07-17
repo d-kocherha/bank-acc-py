@@ -5,7 +5,7 @@ from logic.acc_features import BankAccount
 class Engine:
 
     def __init__(self):
-        self.token = True
+        pass
 
     def connect_db():
         user_db = input("Provide user base file path: ")
@@ -18,7 +18,8 @@ class Engine:
 
     def registration(connected_db):
         """Creates user and updates db."""
-        connected_db.update_db(uf.register(connected_db.read_db()))
+        new_user = uf.register(connected_db.read_db())
+        connected_db.update_db(new_user)
         
 
     def login(connected_db):
@@ -27,13 +28,29 @@ class Engine:
         return user_id
     
     def create_account(connected_db, user_id):
-        new_account = BankAccount.create_account(user_id)
+        """Creates new user"""
+        new_account = BankAccount.create_checking(user_id)
         connected_db.update_acc(new_account)
+
+    def money_operator(connected_db, user_id):
+        """Takes db of account and user ID to withdraw/deposit."""
+        balance = connected_db.retrieve_balance(user_id)
+        #Write logic to prevent further running if returned None
+        account = BankAccount()
+        option = input("What you would like to do (withdraw/deposit)? ")
+        if option == "withdraw":
+            new_balance = account.withdrawal(balance)
+            connected_db.update_balance(new_balance, user_id)
+        elif option == "deposit":
+            new_balance = account.deposit(balance)
+            connected_db.update_balance(new_balance, user_id)
+        else:
+            print("Invalid input")
 
 
 connection = Data_Operator('data/db', 'data/acc_db')
+user = "Desmond"
 
-user_id = Engine.login(connection)
-Engine.create_account(connection, user_id) #overrides the latest data in JSON. To be fixed.
+Engine.money_operator(connection, user)
 
 
