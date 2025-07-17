@@ -2,36 +2,41 @@
 class BankAccount:
 
     def __init__(self):
-        self.balance = 0
+        pass
 
-    def create_account(user_ID):
+    def create_checking(user_ID):
         """Function for creation of user bank account"""
-        user_account = {'user_account' : user_ID,
-                         'balance' : 0}     
+        user_account = {user_ID : {'type' : 'checking', 'balance' : 0}  }   
         return user_account
 
-    def retrieve_balance(self, account_data):
-        """Fetch data from accounts for balance upd."""
-        self.balance = account_data["balance"]
-        return self.balance
+    def provide_amount(self):
+        amount = int(input("Provide the amount"))
+        try:
+            return amount
+        except:
+            print("You should enter number value.")
+            return self.provide_amount()
 
-    def withdrawal(self, withdrawal):
+    def withdrawal(self, balance):
         # Withdrawal works okay. No changes required.
-        if self.balance-withdrawal < 0:
+        withdrawal = self.provide_amount()
+        if balance-withdrawal < 0:
             print("You don't have enough for withdrawal!")
-            print(f"Current balance : {self.balance}")
+            print(f"Current balance : {balance}")
+            return balance 
         else:
-            self.balance -= withdrawal
+            balance -= withdrawal
             print(f"You have withdrawn {float(withdrawal)}$.\n"\
-                f"Your new balance is {float(self.balance)}$.")
-            return self.balance
+                f"Your new balance is {float(balance)}$.")
+            return balance
 
-    def deposit(self, deposit):
+    def deposit(self, balance):
         # Deposit works okay. No changes required.
-        self.balance += deposit
+        deposit = self.provide_amount()
+        balance += deposit
         print(f"Your deposit of {float(deposit)}$ has been successful.\n"\
-            f"Your new balance is {float(self.balance)}$")
-        return self.balance
+            f"Your new balance is {float(balance)}$")
+        return balance
     
 
 
