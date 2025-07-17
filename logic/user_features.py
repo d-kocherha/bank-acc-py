@@ -16,7 +16,7 @@ def get_password(user_data, password):
 def register(user_data):
     print("Welcome to the Bank LTD, please register new user!")
     user_name = input("Enter new user name: \n")
-    if get_username(user_data, user_name) == False:
+    if get_username(user_data, user_name) == None:
         password = input("Enter your password: \n")
         password_confirm = input("Enter your password to confirm: \n")
         if password == password_confirm:
