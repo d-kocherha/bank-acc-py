@@ -26,3 +26,20 @@ class Data_Operator:
         open_db = self.read_acc()
         updated_acc = {**open_db, **changes}
         return self.account_db.write_text(json.dumps(updated_acc, indent=4))
+
+    def retrieve_balance(self, user_id):
+        """Fetch data from accounts."""
+        open_db = self.read_acc()
+        if user_id in open_db:
+            get_balance = open_db[user_id].get("balance")
+            balance = get_balance
+            return balance
+        else:
+            print("There's no bank account for this user yet.")
+        
+    def update_balance(self, upd_balance, user_id):
+        "Attempt to create function to change "
+        open_db = self.read_acc()
+        if user_id in open_db:
+            open_db[user_id]["balance"] = upd_balance
+            return self.account_db.write_text(json.dumps(open_db, indent=4))
