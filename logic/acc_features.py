@@ -6,8 +6,13 @@ class BankAccount:
 
     def create_checking(user_ID):
         """Function for creation of user bank account"""
-        user_account = {user_ID : {'type' : 'checking', 'balance' : 0}  }   
+        user_account = {user_ID : {'type' : 'checking', 'balance' : 0 } }  
         return user_account
+
+    def record_transaction(self, timestamp, balance, operation, amount):
+        """Create transaction record to pass it to history."""
+        transaction = {'date' : timestamp, 'balance' : balance, 'operation' : operation, 'amount' : amount}
+        return transaction
 
     def provide_amount(self):
         amount = int(input("Provide the amount"))
@@ -23,12 +28,12 @@ class BankAccount:
         if balance-withdrawal < 0:
             print("You don't have enough for withdrawal!")
             print(f"Current balance : {balance}")
-            return balance 
+            return balance, 0
         else:
             balance -= withdrawal
             print(f"You have withdrawn {float(withdrawal)}$.\n"\
                 f"Your new balance is {float(balance)}$.")
-            return balance
+            return balance, withdrawal
 
     def deposit(self, balance):
         # Deposit works okay. No changes required.
@@ -36,7 +41,8 @@ class BankAccount:
         balance += deposit
         print(f"Your deposit of {float(deposit)}$ has been successful.\n"\
             f"Your new balance is {float(balance)}$")
-        return balance
+        return balance, deposit
     
+
 
 
