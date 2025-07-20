@@ -12,8 +12,9 @@ While this repo may not be useful for 10x developers and has little to no value 
 - User registration;  
 - User login;
 - Storing user data such as username, ID, and password in a `.json` file (used as a database);
-- Created deposit and withdrawal functions (not yet implemented);
-- CLI-based `main.py` to interact with the app (now used for tests). 
+- Create account (only checking for now) and save it in an `.json` file;
+- Created deposit and withdrawal functions;
+- Implemented functionality to save user transaction history.
 
 ---
 
@@ -21,7 +22,6 @@ While this repo may not be useful for 10x developers and has little to no value 
 
 - I'm writing this app in the most hyped language (which may or may not be the best idea): **Python**; 
 - JSON is used as a database for now;
-- Currently learning SQL — future versions might include PostgreSQL;
 
 ---
 
@@ -31,7 +31,7 @@ While this repo may not be useful for 10x developers and has little to no value 
 - Learn to use Git and GitHub;  
 - Structure a small project;  
 - Fail, learn, fail again, and learn more;  
-- Get small dopamine hits when features finally work!
+- Get small dopamine hits when the feature finally works!
 
 ---
 
@@ -42,7 +42,9 @@ While this repo may not be useful for 10x developers and has little to no value 
 - Simple refactoring;  
 - Using modules;  
 - Reading/writing JSON files;  
-- Storing and interacting with user data;  
+- Storing and interacting with user data;
+- Enabled deposit and withdrawal functionality;  
+- Store transaction history; 
 - More to be added (TBU).
 
 ---
@@ -50,7 +52,6 @@ While this repo may not be useful for 10x developers and has little to no value 
 ## TODO
 
 - Let users create savings or checking accounts;  
-- Enable deposit and withdrawal functionality;  
 - Store transaction history;  
 - Provide basic user insights for a better experience.  
 
