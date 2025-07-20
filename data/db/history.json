@@ -1,0 +1,30 @@
+{
+    "09e51a33-30b1-46c9-b728-743e98d1b20f": [
+        {
+            "date": "2025-07-20T18:02:12.970353",
+            "balance": 2200,
+            "operation": "deposit",
+            "amount": 300
+        },
+        {
+            "date": "2025-07-20T18:02:36.409379",
+            "balance": 1200,
+            "operation": "withdraw",
+            "amount": 1000
+        },
+        {
+            "date": "2025-07-20T18:05:47.510277",
+            "balance": 16200,
+            "operation": "deposit",
+            "amount": 15000
+        }
+    ],
+    "bf7c0669-82c9-4949-9496-36b739a787f8": [
+        {
+            "date": "2025-07-20T18:18:01.903309",
+            "balance": 100000,
+            "operation": "deposit",
+            "amount": 100000
+        }
+    ]
+}
